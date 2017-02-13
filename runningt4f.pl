@@ -5,7 +5,7 @@ use strict;
 use warnings;
 
 print "Enter the full path to Tax4Fun Silva Reference DATA folder:\n";
-chomp (my $tax4fun_silva=<STDIN>);#dummy
+chomp (my $tax4fun_silva=<STDIN>);
 print "$tax4fun_silva\n";
 
 print "Enter FOLDER path of the QIIME biom tsv\n(please enter path with final '/')";
@@ -16,7 +16,7 @@ my $biomin=<STDIN>
 print "\n\n Runing Tax4Fun\n\n";
 my $qiimein=$outfolder.$biomin;
 my$qiimeout=$outfolder."/Tax4FunOutput.tsv";
-#print $qiimein;
+
 
 my $R = Statistics::R->new();
 my $cmds = <<EOF;
