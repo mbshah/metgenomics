@@ -91,13 +91,13 @@ KO2Path usage :
 
 This has to be run from the folder where the script is present
 
-<inputfile> would have the COMPLETE path of the Tax4fun output.
+`<inputfile>` would have the COMPLETE path of the Tax4fun output.
 
-<keyword> would be the pathway whose all the molecule you would like to 
+`<keyword>` would be the pathway whose all the molecule you would like to 
 see specially in a seperate file. Leave blank if not required but still 
 leave "".
 
-<KEGG_Storage_folder> would be the folder where you would like to store 
+`<KEGG_Storage_folder>` would be the folder where you would like to store 
 the KEGG files for quicker access. make sure the directory exists.
 
 The output would be saved in the same folder as your input file.
@@ -113,13 +113,13 @@ KO2Path usage :
 
 This has to be run from the folder where the script is present
 
-<inputfile> would have the COMPLETE path of the KO2Path output.
+`<inputfile>` would have the COMPLETE path of the KO2Path output.
 
-<keyword> would be the pathway whose all the molecule you would like to 
+`<keyword>` would be the pathway whose all the molecule you would like to 
 see specially in a seperate file. Leave blank if not required but still 
 leave "".
 
-<KEGG_Storage_folder> would be the folder where you would like to store 
+`<KEGG_Storage_folder>` would be the folder where you would like to store 
 the KEGG files for quicker access. make sure the directory exists.
 
 The output would be saved in the same folder as your input file.
