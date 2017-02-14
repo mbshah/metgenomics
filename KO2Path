@@ -10,9 +10,7 @@ KO2Path
 This script is designed to convert the output of Tax4Fun to a Pathway Profile using kegg.jp as reference.
 
 Developed on and for Unix/Linux.
-If you are behind a proxy before the program is executed you will need to set proxy address as:
-
-export http_proxy://user:password\@proxyaddress:port/
+If you are behind a proxy (Check README)
 
 Thank you for using this program
 --Developed by Manan Shah
@@ -42,7 +40,7 @@ if ( exists($ARGV[1])){
 }
 if ( exists($ARGV[2])){
 	$kegg_dir=$ARGV[2];
-	print "Folder to store and retrive KEGG data from:$kegg_dir";
+	print "Folder to store and retrive KEGG data from:$kegg_dir\n";
 }else{
 	print "Folder to store and retrive KEGG data from\n(Check Readme for Reason):";
 	chomp($kegg_dir=<STDIN>);
