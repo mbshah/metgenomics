@@ -10,9 +10,8 @@ Path2Class
 This Script is designed to convert output of KO2Path to a sublevel level profile using kegg.jp as reference.
 
 Developed on and for Unix/Linux.
-If you are behind a proxy before the program is executed you will need to set proxy address as:
+If you are behind a proxy (Check README)
 
-export http_proxy://user:password\@proxyaddress:port/
 
 Thank you for using this program
 --Developed by Manan Shah
@@ -42,7 +41,7 @@ if ( exists($ARGV[1])){
 }
 if ( exists($ARGV[2])){
 	$kegg_dir=$ARGV[2];
-	print "Folder to store and retrive KEGG data from:$kegg_dir";
+	print "Folder to store and retrive KEGG data from:$kegg_dir\n";
 }else{
 	print "Folder to store and retrive KEGG data from\n(Check Readme for Reason):";
 	chomp($kegg_dir=<STDIN>);
@@ -91,12 +90,16 @@ print "\n\nOutput saved to $outfilename\n";
 
 #Writing Sublevel Profile
 open (my $output, ">",$outfilename);									#open OUTPUT file;
-print $output "\"KEGG_Class(slevel Counts)\"\t";foreach(@headers){print $output "$_\t";};print $output "\n"; #printing the header line in output
+print $output "\"KEGG_Class\"\t\"Kegg_Sub_class(Pathway Counts)\"\t";foreach(@headers){print $output "$_\t";};print $output "\n"; #printing the header line in output
 @unique_slevels= reverse sort @unique_slevels;
 for(my $i=0;$i<scalar(@unique_slevels);$i++){							#printing the sublevel profile
 	my $thisslevel=$unique_slevels[$i];
 	my $class_count=$ClassCount{$thisslevel}/scalar(@headers);
-	print $output "\"$thisslevel($class_count)\"\t";
+	my $ths2=$thisslevel;
+	my $ths3;
+	if($ths2=~/(.*);(.*)/){
+	$ths3="\"".$1."\"\t\"".$2;print "$1\t$2\n";}else{$ths3="\"Unknown\"\t\"".$thisslevel}
+	print $output "$ths3($class_count)\"\t";
 	for(my $x=0;$x<scalar(@headers);$x++){
 		print $output "$arrayofhashes[$x]{$thisslevel}\t";
 	}
@@ -190,3 +193,4 @@ sub calculate_slevel_profile{											#subroutine to process the profile into 
 	}
 
 }
+
