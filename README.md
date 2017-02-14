@@ -87,7 +87,7 @@ institution proxy you will need to enter the following command:
 `export http_proxy=http://<proxyUsername>:<proxyPassword>@<Proxyaddress>:<Port>`
 
 KO2Path usage :
-./KO2Path <inputfile> "<keyword>" <KEGG_Storage_folder>
+`./KO2Path <inputfile> "<keyword>" <KEGG_Storage_folder>`
 
 This has to be run from the folder where the script is present
 
@@ -109,7 +109,7 @@ profile based on information present on KEGG database and Tax4Fun
 output.
 
 KO2Path usage :
-./Path2Class <inputfile> "<keyword>" <KEGG_Storage_folder>
+`./Path2Class <inputfile> "<keyword>" <KEGG_Storage_folder>`
 
 This has to be run from the folder where the script is present
 
