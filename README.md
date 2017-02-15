@@ -49,7 +49,7 @@ PERL-	 ALso Installed on LInux by default if not would be available
 
 Statistics::R package:
 		install with the command:
-		`cpan cpan install Statistics::R`
+		`cpan install Statistics::R`
 ************************************************************************
 Please NOTE: At every stage when requested to enter the path make sure 
 			 you enter the path with the trailing "/";
