@@ -75,7 +75,9 @@ file would be present.
 (please note: do not provide path to input file here)
 
 Then you will be prompted for input tsv file name which would be present 
-in the above folder
+in the above folder.
+
+***Please Note: Tax4Fun has its own set of citations and license. please go through them independently.***
 
 STEP2: Run KO2Path
 -------------------
